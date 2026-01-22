@@ -11,7 +11,6 @@ const publicPath = path.join(__dirname, "public");
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(publicPath));
 
 mongoose.connect(process.env.ATM_DB_URI)
     .then(() => console.log("ATM DB Bağlandı"))
@@ -23,25 +22,31 @@ const accountSchema = new mongoose.Schema({
 const Account = mongoose.model("Account", accountSchema);
 
 app.get("/api/atm/balance", async (req, res) => {
-    let account = await Account.findOne() || new Account();
+    let account = await Account.findOne();
+    if (!account) {
+        account = new Account();
+        await account.save();
+    }
     res.json({ balance: account.balance });
 });
 
 app.post("/api/atm/withdraw", async (req, res) => {
     try {
         const amount = Number(req.body.amount);
-        if (isNaN(amount) || amount <= 0) return res.status(400).json({ error: "Geçersiz tutar" });
+        if (!amount || amount <= 0) {
+            return res.status(400).json({ error: "Geçersiz tutar" });
+        }
 
-        let account = await Account.findOne();
-        if (!account) account = new Account();
-
-        if (amount > account.balance) return res.status(400).json({ error: "Yetersiz bakiye" });
+        const account = await Account.findOne();
+        if (amount > account.balance) {
+            return res.status(400).json({ error: "Yetersiz bakiye" });
+        }
 
         account.balance -= amount;
         await account.save();
 
         res.json({ balance: account.balance });
-    } catch (err) {
+    } catch {
         res.status(500).json({ error: "İşlem başarısız" });
     }
 });
@@ -49,21 +54,21 @@ app.post("/api/atm/withdraw", async (req, res) => {
 app.post("/api/atm/deposit", async (req, res) => {
     try {
         const amount = Number(req.body.amount);
-        if (isNaN(amount) || amount <= 0) return res.status(400).json({ error: "Geçersiz tutar" });
+        if (!amount || amount <= 0) {
+            return res.status(400).json({ error: "Geçersiz tutar" });
+        }
 
-        let account = await Account.findOne();
-        if (!account) account = new Account();
-
+        const account = await Account.findOne();
         account.balance += amount;
         await account.save();
 
         res.json({ balance: account.balance });
-    } catch (err) {
+    } catch {
         res.status(500).json({ error: "İşlem başarısız" });
     }
 });
 
-app.use("/", express.static(path.join(publicPath, "!indexPage")));
+app.use("/", express.static(path.join(publicPath, "indexPage")));
 app.use("/atm", express.static(path.join(publicPath, "atmSimulator/client/dist")));
 app.use("/kitap", express.static(path.join(publicPath, "bookListApp")));
 app.use("/doviz", express.static(path.join(publicPath, "currencyConverter")));
@@ -74,10 +79,12 @@ app.use("/bunumuariyordun", express.static(path.join(publicPath, "productListApp
 app.use("/neyesem", express.static(path.join(publicPath, "recipeFinder")));
 app.use("/basardimmi", express.static(path.join(publicPath, "averageCalculator")));
 
-app.get(/^\/atm(\/.*)?$/, (req, res) => {
-    res.sendFile(path.join(publicPath, "atmSimulator", "index.html"));
+app.get("/atm/*", (req, res) => {
+    res.sendFile(
+        path.join(publicPath, "atmSimulator/client/dist", "index.html")
+    );
 });
 
 app.listen(port, () => {
-    console.log(`\nSunucu çalışıyor: http://localhost:${port}\n`);
+    console.log(`Sunucu çalışıyor: http://localhost:${port}`);
 });
