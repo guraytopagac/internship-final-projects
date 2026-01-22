@@ -3,7 +3,7 @@ import './css/Footer.css'
 function Footer() {
     return (
         <footer className="footer">
-            <p>© 2026 Favori Oyunlarım | Geliştiren: Güray Topağaç</p>
+            <p>© 2026 Oyun Delisi | Geliştiren: Güray Topağaç</p>
         </footer>
     )
 }
