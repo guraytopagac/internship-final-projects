@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.MONGO_URI;
+const uri = process.env.ATM_DB_URI;
 
 mongoose.connection.on('connecting', () => console.log("MongoDB bağlanıyor..."));
 mongoose.connection.on('connected', () => console.log("MongoDB Atlas'a bağlandı!"));
