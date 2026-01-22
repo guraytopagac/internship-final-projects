@@ -40,7 +40,7 @@
     </div>
 
     <footer class="footer">
-        <p>© 2026 ATM Simülasyonu | Geliştiren: Güray Topağaç</p>
+        <p>© 2026 Banka Simülasyonu | Geliştiren: Güray Topağaç</p>
     </footer>
 </template>
 
@@ -65,7 +65,7 @@
 
     async function loadBalance() {
         try {
-            const res = await axios.get("http://localhost:3000/api/atm/balance");
+            const res = await axios.get("/api/atm/balance");
             balance.value = res.data.balance;
         } catch (err) {
             console.error("Balance alınamadı", err);
@@ -152,16 +152,8 @@
 
     function handleCancel() {
         if (stage.value === "card") return;
-
-        if (stage.value === "password") {
-            screenText.value = "İşlem iptal edildi.\n\nLütfen Kartınızı Takınız...";
-            enteredPassword.value = "";
-            resetATM();
-            return;
-        }
-
         resetATM();
-        screenText.value = "İşlem iptal edildi.\n\nLütfen Kartınızı Takınız...";
+        screenText.value = "İşlem iptal edildi.\n\nLütfen kartınızı alınız.";
     }
 
     function handleClear() {
@@ -177,7 +169,7 @@
     function choice() {
         async function withdraw(amount) {
             try {
-                const res = await axios.post("http://localhost:3000/api/atm/withdraw", { amount });
+                const res = await axios.post("/api/atm/withdraw", { amount });
                 balance.value = res.data.balance;
                 screenText.value = `İşlem Başarılı.\nKalan: ${balance.value} TL\n\nMenüye dönmek için girişe basınız.`;
             } catch (err) {
@@ -187,7 +179,7 @@
 
         async function deposit(amount) {
             try {
-                const res = await axios.post("http://localhost:3000/api/atm/deposit", { amount });
+                const res = await axios.post("/api/atm/deposit", { amount });
                 balance.value = res.data.balance;
                 screenText.value = `İşlem Başarılı.\nYeni Bakiye: ${balance.value} TL\n\nMenüye dönmek için girişe basınız.`;
             } catch (err) {
