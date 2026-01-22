@@ -20,10 +20,14 @@ header {
 }
 
 footer {
+    width: 100%;
+    background: linear-gradient(90deg, #1d0cb6, #3a2adf);
+    color: white;
     padding: 25px 0;
     font-size: 18px;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .page {
@@ -32,8 +36,8 @@ footer {
     gap: 30px;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 200px);
-    padding: 0 0 120px;
+    padding: 50px 0;
+    box-sizing: border-box;
 }
 
 .button-row {
@@ -103,4 +107,37 @@ footer {
     font-size: 13px;
     line-height: 1.4;
     opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 24px;
+        padding: 30px 10px;
+    }
+
+    .page {
+        min-height: calc(100vh - 120px);
+        padding-bottom: 40px;
+        padding: 30px 0;
+    }
+
+    .button-row {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        height: auto;
+        min-height: 150px;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px 5px;
+        margin-top: 20px;
+    }
 }
