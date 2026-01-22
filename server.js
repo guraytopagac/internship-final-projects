@@ -8,6 +8,7 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, "public");
+const atmPath = path.join(__dirname, "public", "atmSimulator", "client", "dist");
 
 app.use(cors());
 app.use(express.json());
@@ -69,7 +70,7 @@ app.post("/api/atm/deposit", async (req, res) => {
 });
 
 app.use("/", express.static(path.join(publicPath, "indexPage")));
-app.use("/atm", express.static(path.join(publicPath, "atmSimulator/client/dist")));
+app.use("/atm", express.static(atmPath));
 app.use("/kitap", express.static(path.join(publicPath, "bookListApp")));
 app.use("/doviz", express.static(path.join(publicPath, "currencyConverter")));
 app.use("/akaryakit", express.static(path.join(publicPath, "gasStation")));
@@ -79,10 +80,8 @@ app.use("/bunumuariyordun", express.static(path.join(publicPath, "productListApp
 app.use("/neyesem", express.static(path.join(publicPath, "recipeFinder")));
 app.use("/basardimmi", express.static(path.join(publicPath, "averageCalculator")));
 
-app.get("/atm/*", (req, res) => {
-    res.sendFile(
-        path.join(publicPath, "atmSimulator/client/dist", "index.html")
-    );
+app.get("/atm*", (req, res) => {
+    res.sendFile(path.join(atmPath, "index.html"));
 });
 
 app.listen(port, () => {
