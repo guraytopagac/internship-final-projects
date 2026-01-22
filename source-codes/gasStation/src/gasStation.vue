@@ -3,7 +3,7 @@
 
     <header>Akaryakıt Otomasyonu</header>
 
-    <main class="page">
+    <div class="page">
       <div class="form-area">
         <div>
           <label>Pompa No</label>
@@ -31,7 +31,7 @@
       <div id="result">
         <p style="white-space: pre-line">{{ result }}</p>
       </div>
-    </main>
+    </div>
 
     <footer>
       © 2026 Akaryakıt Otomasyonu | Geliştiren: Güray Topağaç

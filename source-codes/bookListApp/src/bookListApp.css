@@ -168,3 +168,95 @@ th {
     color: #cfe3ff;
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.45);
 }
+
+/* --- MOBİL UI DÜZENLEMELERİ --- */
+@media (max-width: 1024px) {
+
+    /* 3 sütunlu yapıyı tek sütuna düşürüyoruz */
+    .tables {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .page {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+
+    /* Arama kutusunu mobilde tam genişlik yapıyoruz */
+    .search {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search input {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 22px;
+    }
+
+    section {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 450px;
+    }
+
+    .shelfs table {
+        table-layout: fixed;
+    }
+
+    .shelfs table td,
+    .shelfs table th {
+        padding: 10px 5px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 20px 10px;
+        margin-top: auto;
+        position: relative;
+    }
+
+    .layout {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page {
+        flex: 1;
+        padding: 0 5px;
+        margin: 30px auto;
+    }
+
+    th,
+    td {
+        padding: 8px 4px;
+        font-size: 11px;
+    }
+
+    .products td {
+        word-break: break-word;
+        max-width: 80px;
+    }
+
+    .search input {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
