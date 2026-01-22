@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(to bottom, #330000, #660000, #990000);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background: linear-gradient(90deg, #ff3b3b, #ff6b6b);
+    color: white;
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.65);
+}
+
+.page {
+    margin-top: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+input {
+    font-size: 18px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border: none;
+}
+
+input:focus {
+    box-shadow: 0 0 30px #ff3b3b, 0 0 60px #ff4d4d, 0 0 90px #ff6b6b;
+    transition: 0.3s;
+}
+
+#primeButton {
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(90deg, #ff0000, #ff4d4d);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+#primeButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff6666;
+}
+
+#screenMessage {
+    text-align: center;
+    white-space: pre-line;
+    margin-top: 30px;
+    background: rgba(255, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+footer {
+    width: 100%;
+    background: linear-gradient(90deg, #ff3b3b, #ff6b6b);
+    color: white;
+    padding: 25px 0;
+    font-size: 18px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(90deg, #1d0cb6, #3a2adf);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    width: 100%;
+    background: linear-gradient(90deg, #1d0cb6, #3a2adf);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    padding: 20px 0;
+}
+
+.atm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(0.95) translateX(0);
+    }
+
+    25% {
+        transform: scale(0.95) translateX(-10px);
+    }
+
+    50% {
+        transform: scale(0.95) translateX(10px);
+    }
+
+    75% {
+        transform: scale(0.95) translateX(-10px);
+    }
+
+    100% {
+        transform: scale(0.95) translateX(0);
+    }
+}
+
+.screen {
+    border: 12px solid #2c3e50;
+    width: 600px;
+    height: 280px;
+    background-color: #0a0a0a;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 30px rgba(0, 255, 65, 0.1), 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.screen-content p {
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    text-align: center;
+    white-space: pre-wrap;
+    margin: 0;
+    padding: 25px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+}
+
+.cursor {
+    display: inline-block;
+    width: 12px;
+    height: 24px;
+    background-color: #00ff41;
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+    box-shadow: 0 0 8px #00ff41;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.button-border {
+    background-color: #a4b0be;
+    border: 12px solid #555;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    padding: 30px 40px 40px 40px;
+    width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.info-plate {
+    background: linear-gradient(145deg, #f0f0f0, #bdc3c7);
+    color: #2c3e50;
+    border: 1px solid #95a5a6;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 85px) 185px;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    height: 65px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    background-color: #222;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #444;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #000;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+button:hover {
+    background-color: #333;
+    border-color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4), 0 5px 0 #000;
+    text-shadow: 0 0 5px #00d2ff;
+}
+
+#cancel {
+    background-color: #b71c1c;
+    border-color: #800;
+}
+
+#cancel:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.6), 0 5px 0 #000;
+    text-shadow: none;
+    border-color: #ff5252;
+}
+
+#clear {
+    background-color: #f9a825;
+    color: black;
+    border-color: #c67100;
+}
+
+#clear:hover {
+    background-color: #ffc107;
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.6), 0 5px 0 #000;
+    text-shadow: none;
+    border-color: #fff176;
+}
+
+#enter {
+    background-color: #2e7d32;
+    border-color: #1b5e20;
+    text-shadow: none;
+}
+
+#enter:hover {
+    background-color: #388e3c;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6), 0 5px 0 #000;
+    border-color: #b9f6ca;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #000, 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.zero-row {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+}
+
+#zero {
+    width: 85px;
+}

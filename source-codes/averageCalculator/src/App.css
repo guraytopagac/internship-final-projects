@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+header,
+footer {
+  width: 100%;
+  background: linear-gradient(90deg, #1d0cb6, #3a2adf);
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  padding: 30px 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 15px 0;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px 20px;
+  gap: 15px;
+}
+
+.courseNumber {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.courseNumber h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.courseNumber select {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.courseHeaders,
+.courses {
+  display: grid;
+  grid-template-columns: 200px 150px 150px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.courseHeaders {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1d0cb6;
+  text-decoration: underline;
+}
+
+.courses input,
+.courses select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input,
+select {
+  padding: 10px;
+  min-width: 120px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #1d0cb6;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #3a2adf;
+  box-shadow: 0 0 8px rgba(58, 42, 223, 0.4);
+}
+
+button {
+  margin-top: 20px;
+  width: 250px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #1d0cb6;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: white;
+  color: #1d0cb6;
+  border: 2px solid #1d0cb6;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #1d0cb6, #3a2adf);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  text-align: center;
+}
+
+.result-box h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.result-box p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}

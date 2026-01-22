@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+header,
+footer {
+    width: 100%;
+    background: linear-gradient(90deg, #1d0cb6, #3a2adf);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    padding: 5vh 0;
+    font-size: 36px;
+}
+
+footer {
+    padding: 25px 0;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 0 0 120px;
+}
+
+.button-row {
+    display: flex;
+    gap: 20px;
+}
+
+.project-card {
+    all: unset;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 260px;
+    height: 180px;
+    background: linear-gradient(145deg, #1e1e2f, #2a2a45);
+    border-radius: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: linear-gradient(135deg, #6b2adf, #3a2adf, #1d0cb6);
+    box-shadow: 0 16px 40px rgba(29, 12, 182, 0.4);
+}
+
+.project-card:active {
+    transform: scale(0.95);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.icon {
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.project-card:hover .icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.title {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.desc {
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.75;
+}
