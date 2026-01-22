@@ -2,18 +2,20 @@
     <header>Dostum Diyen Asal Sayı Kontrolcüsü</header>
 
     <div class="page">
-        <div class="inputBox">
-            <input type="text" v-model="inputValue" placeholder="Merak ettiğin sayı" @keyup.enter="checkFormat" />
-        </div>
+        <div class="content">
+            <div class="inputBox">
+                <input type="text" v-model="inputValue" placeholder="Merak ettiğin sayı" @keyup.enter="checkFormat" />
+            </div>
 
-        <div id="bttn">
-            <button id="primeButton" @click="checkFormat">
-                Asal mı?
-            </button>
-        </div>
+            <div id="bttn">
+                <button id="primeButton" @click="checkFormat">
+                    Asal mı?
+                </button>
+            </div>
 
-        <div class="screen">
-            <p id="screenMessage">{{ screenMessage }}</p>
+            <div class="screen">
+                <p id="screenMessage">{{ screenMessage }}</p>
+            </div>
         </div>
     </div>
 

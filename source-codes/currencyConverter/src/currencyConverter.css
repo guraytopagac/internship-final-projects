@@ -95,3 +95,44 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 600px) {
+    header {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+
+    .page {
+        padding: 20px 10px;
+        justify-content: center;
+    }
+
+    .converter {
+        width: 90%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    input,
+    select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .results {
+        width: 90%;
+        max-width: none;
+    }
+
+    .results p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px 5px;
+        position: relative;
+        margin-top: auto;
+    }
+}
