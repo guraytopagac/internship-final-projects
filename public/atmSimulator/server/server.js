@@ -73,10 +73,10 @@ app.post("/api/atm/deposit", async (req, res) => {
     }
 });
 
-app.use("/atm", express.static(path.join(__dirname, "public")));
+app.use("/atm", express.static(path.join(__dirname, "..", "public")));
 
-app.get(/.atm*/, (req, res) => {
-    res.sendFile(path.resolve(__dirname, "public", "index.html"));
+app.get("/atm*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "..", "public", "index.html"));
 });
 
 app.listen(port, () => console.log(`Server çalışıyor: http://localhost:${port}/atm`));
