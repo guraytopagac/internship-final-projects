@@ -215,3 +215,39 @@ button:active {
 #zero {
     width: 85px;
 }
+
+@media (max-width: 600px) {
+
+    .screen,
+    .button-border {
+        width: 95% !important;
+        max-width: none !important;
+        height: auto !important;
+        min-height: 180px;
+    }
+
+    .atm-container {
+        transform: scale(1) !important;
+        width: 100%;
+    }
+
+    .screen-content p {
+        font-size: 18px !important;
+        padding: 15px !important;
+    }
+
+    .button-grid {
+        grid-template-columns: repeat(3, 1fr) 1.2fr !important;
+        gap: 8px !important;
+    }
+
+    button {
+        height: 55px !important;
+        font-size: 14px !important;
+    }
+
+    .footer {
+        position: relative !important;
+        margin-top: 20px;
+    }
+}
