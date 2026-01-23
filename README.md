@@ -1,16 +1,18 @@
-![Proje Ekran Görüntüsü](https://github.com/user-attachments/assets/efea5241-9197-4c8a-8c2f-40770da76188)
-
 # 🎓 Staj Final Projeleri
 
-Bu repository, staj sürecim boyunca geliştirdiğim web projelerini içermektedir. Projeler **Node.js** ve **Express.js** kullanılarak geliştirilmiş, istemci tarafındaki statik dosyalar `public/` klasörü altında yapılandırılmıştır.
+[![Proje Önizleme](https://github.com/user-attachments/assets/efea5241-9197-4c8a-8c2f-40770da76188)](https://guray-topagac.onrender.com)
 
-Tüm projeler hem **masaüstü** hem de **mobil cihazlar** için uyumlu hâle getirilmiş ve canlı ortamda yayınlanmıştır.
+<p align="center">
+  <kbd>✨ Görsele tıklayarak canlı demoyu inceleyebilirsiniz.</kbd>
+</p>
 
-🌐 **Canlı Website:**  
-https://guray-topagac.onrender.com
+---
 
-📂 **GitHub Repository:**  
-https://github.com/guraytopagac/internship-final-projects
+## 🔗 Hızlı Erişim
+
+| 🌐 Canlı Website | 📂 Kaynak Kodlar |
+| :--- | :--- |
+| [guray-topagac.onrender.com](https://guray-topagac.onrender.com) | [GitHub Repository](https://github.com/guraytopagac/internship-final-projects) |
 
 ---
 
@@ -37,27 +39,19 @@ internship-final-projects/
 ├── server.js              # Express.js sunucu dosyası
 └── README.md              # Proje dokümantasyonu
 ```
-
+---
 
 ## 🛠 Kullanılan Teknolojiler
 
+| Kategori | Teknolojiler |
+| :--- | :--- |
+| **Backend** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) |
+| **Frontend** | ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+| **Veritabanı** | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) |
+| **Paket Yönetimi** | ![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) |
+| **Dağıtım** | ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) |
 
-### Backend
-- Node.js
-- Express.js
-
-### Frontend
-- Vue.js
-- HTML
-- CSS
-- JavaScript
-
-### Paket Yönetimi
-- NPM
-
-### Dağıtım
-- Render.com
-
+---
 ## 🗄 Veritabanı Yapılandırması
 
 Bu projede MongoDB kullanılmaktadır.
