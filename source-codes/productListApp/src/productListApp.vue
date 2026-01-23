@@ -21,22 +21,16 @@
             </div>
         </div>
         <div id="screen">
-            <div v-if="!searched" class="empty-state">
-                <h2>Ürünler burada listelenecek!</h2>
+            <div class="title">Arama Sonuçları:</div>
+
+            <div v-if="filteredProducts.length === 0" class="no-results">
+                <strong>Ürün bulunamadı.</strong>
             </div>
 
-            <div v-else>
-                <div class="title">Arama Sonuçları:</div>
-
-                <div v-if="filteredProducts.length === 0" class="no-results">
-                    <strong>Ürün bulunamadı.</strong>
-                </div>
-
-                <div v-for="product in filteredProducts" :key="product.name" class="selectedProducts">
-                    <span class="product-name">{{ product.name }}</span>
-                    <span class="product-price">{{ product.price.toFixed(2) }} TL</span>
-                    <span class="product-category">({{ product.category }})</span>
-                </div>
+            <div v-for="product in filteredProducts" :key="product.name" class="selectedProducts">
+                <span class="product-name">{{ product.name }}</span>
+                <span class="product-price">{{ product.price }} TL</span>
+                <span class="product-category">({{ product.category }})</span>
             </div>
         </div>
     </div>
@@ -81,9 +75,7 @@
     const categories = ["Elektronik", "Mobilya", "Kırtasiye", "Ev & Yaşam", "Spor"];
 
     const searchText = ref("");
-    const filteredProducts = ref([]);
-    const searched = ref(false);
-
+    const filteredProducts = ref([...products]);
     const selectedCategory = ref('');
     const minPrice = ref('');
     const maxPrice = ref('');
@@ -96,7 +88,6 @@
             const matchesText = searchText.value ? product.name.toLowerCase().includes(searchText.value.toLowerCase()) : true;
             return matchesCategory && matchesMin && matchesMax && matchesText;
         });
-        searched.value = true;
     }
 
     function selectCategory(cat) {

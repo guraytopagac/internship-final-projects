@@ -27,6 +27,11 @@ function App() {
   };
 
   const calculate = () => {
+    if (courses.length === 0) {
+      alert("Lütfen önce ders sayısını seçin!");
+      return;
+    }
+
     let total = 0;
     let creditSum = 0;
 
@@ -44,7 +49,6 @@ function App() {
 
     setResult((total / creditSum).toFixed(2));
   };
-
 
   return (
     <>

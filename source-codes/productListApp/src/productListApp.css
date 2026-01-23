@@ -15,17 +15,13 @@ body {
     box-sizing: border-box;
 }
 
-header,
-footer {
+header {
+    padding: 5vh 0;
+    font-size: 36px;
     width: 100%;
     background: linear-gradient(90deg, #1d0cb6, #3a2adf);
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-header {
-    padding: 5vh 0;
-    font-size: 36px;
 }
 
 footer {
@@ -166,14 +162,9 @@ footer {
     font-size: 18px;
 }
 
-.empty-state,
 .no-results {
     text-align: center;
     margin: 20px 0;
-    color: #666;
-}
-
-.no-results {
     color: #b00020;
     font-weight: bold;
 }
