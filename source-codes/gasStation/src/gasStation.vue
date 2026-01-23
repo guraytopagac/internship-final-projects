@@ -7,7 +7,7 @@
       <div class="form-area">
         <div>
           <label>Pompa No</label>
-          <input type="number" v-model.number="pumpNumber" min="1" max="4" placeholder="Pompa No" />
+          <input type="number" v-model.number="pumpNumber" min="1" max="4" placeholder="Pompa No (1-4)" />
         </div>
 
         <div>
@@ -22,7 +22,7 @@
 
         <div>
           <label>Miktar (Litre)</label>
-          <input type="number" v-model.number="amount" min="1" max="100" placeholder="Miktar" />
+          <input type="number" v-model.number="amount" min="1" max="100" placeholder="Miktar (1-100)" />
         </div>
       </div>
 

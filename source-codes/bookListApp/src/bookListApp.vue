@@ -102,18 +102,18 @@
         { title: "1984", author: "George Orwell", price: 9.99, shelf: 3, chapter: 5 },
         { title: "Pride and Prejudice", author: "Jane Austen", price: 7.99, shelf: 4, chapter: 2 },
         { title: "The Catcher in the Rye", author: "J.D. Salinger", price: 6.99, shelf: 5, chapter: 4 },
-
         { title: "Moby Dick", author: "Herman Melville", price: 11.5, shelf: 1, chapter: 4 },
         { title: "War and Peace", author: "Leo Tolstoy", price: 14.99, shelf: 2, chapter: 5 },
         { title: "The Hobbit", author: "J.R.R. Tolkien", price: 12.99, shelf: 3, chapter: 2 },
-        { title: "Crime and Punishment", author: "Fyodor Dostoevsky", price: 10.5, shelf: 4, chapter: 1 },
-        { title: "Brave New World", author: "Aldous Huxley", price: 9.5, shelf: 5, chapter: 3 },
 
+        { title: "Dune", author: "Frank Herbert", price: 11.25, shelf: 4, chapter: 1 },
+        { title: "Brave New World", author: "Aldous Huxley", price: 9.5, shelf: 5, chapter: 3 },
         { title: "Anna Karenina", author: "Leo Tolstoy", price: 13.75, shelf: 1, chapter: 5 },
         { title: "The Alchemist", author: "Paulo Coelho", price: 8.5, shelf: 2, chapter: 1 },
         { title: "Fahrenheit 451", author: "Ray Bradbury", price: 7.99, shelf: 3, chapter: 4 },
         { title: "Jane Eyre", author: "Charlotte Brontë", price: 9.25, shelf: 4, chapter: 3 },
-        { title: "Animal Farm", author: "George Orwell", price: 6.5, shelf: 5, chapter: 2 }
+        { title: "Animal Farm", author: "George Orwell", price: 6.5, shelf: 5, chapter: 2 },
+        { title: "The Little Prince", author: "Antoine de Saint-Exupéry", price: 7.25, shelf: 3, chapter: 1 }
     ];
 
     const leftBooks = computed(() => books.slice(0, Math.ceil(books.length / 2)));
