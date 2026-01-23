@@ -57,7 +57,21 @@ internship-final-projects/
 
 ### Dağıtım
 - Render.com
-  
+
+## 🗄 Veritabanı Yapılandırması
+
+Bu projede MongoDB kullanılmaktadır.
+
+Projeyi çalıştırmadan önce:
+
+1. Proje kök dizininde `.env` dosyası oluşturun
+2. `.env.example` dosyasını referans alarak aşağıdaki değişkeni tanımlayın:
+
+   ATM_DB_URI=BURAYA_KENDI_MONGODB_ATLAS_ADRESINIZI_YAZIN
+
+3. MongoDB servisinin çalıştığından emin olun
+
+> Not: `.env` dosyası güvenlik nedeniyle repository’e eklenmemiştir.
 
 ## 🚀 Kurulum ve Çalıştırma
 
