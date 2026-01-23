@@ -37,6 +37,6 @@
     ];
 
     function openProject(path) {
-        window.open(path, "_blank");
+        window.location.href = path;
     }
 </script>
