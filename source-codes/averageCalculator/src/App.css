@@ -140,63 +140,6 @@ button:hover {
   margin: 0;
 }
 
-/* Mobil Ayarları */
-@media (max-width: 600px) {
-  header {
-    font-size: 24px;
-    padding: 20px 0;
-  }
-
-  .page {
-    padding: 20px 10px 40px 10px;
-    /* Kenar boşluklarını daralttık */
-    min-height: calc(100vh - 140px);
-    /* Footer'ı aşağı itmek için */
-  }
-
-  /* Başlıkları mobilde gizleyebiliriz çünkü her satır bir input/select grubu */
-  .courseHeaders {
-    display: none;
-  }
-
-  .courses {
-    grid-template-columns: 1fr;
-    /* Mobilde her eleman tam satır olsun */
-    gap: 8px;
-    width: 100%;
-    padding: 15px;
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  }
-
-  /* Input ve selectlerin mobilde daha kolay tıklanması için */
-  input,
-  select {
-    width: 100% !important;
-    min-width: unset;
-    height: 45px;
-  }
-
-  button {
-    width: 100%;
-    /* Buton ekranı kaplasın */
-  }
-
-  footer {
-    position: relative !important;
-    /* İsminin kapanmaması için sabitliği kaldır */
-    margin-top: 50px;
-    font-size: 14px;
-  }
-
-  .result-box {
-    width: 90%;
-    padding: 15px;
-  }
-}
-
 @media (max-width: 600px) {
   header {
     font-size: 24px;
